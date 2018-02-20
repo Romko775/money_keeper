@@ -1,0 +1,14 @@
+<!--Login block-->
+ <div class="loginBlock flex flexColumnCenter" ng-show="show_login">
+      <h1>Login</h1>
+      <br>
+      <input type="text" placeholder="login" ng-model="user_login">
+     <br>
+      <input type="password" placeholder="password" ng-model="user_password">
+      <br>
+           
+      <!--   Відповідь із сервера на правильність користувача чи паролю         -->
+      <p>{{login_responce}}</p>
+      <button ng-click="log_in()">OK</button>
+
+</div>

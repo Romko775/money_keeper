@@ -1,0 +1,122 @@
+<!-- Home -->
+<div class="homeBlock" ng-show="show_home">
+    <div class="flex flexAround" style="margin:15px 0">
+        <div class="centerText">
+            <i class="fa fa-credit-card fa-3x" aria-hidden="true"></i>
+            <br>
+            ~{{saves[0].name}}~
+            <br>
+            {{saves[0].sum}} ₴
+        </div>
+        <div class="centerText">
+            <i class="fa fa-university fa-3x" aria-hidden="true"></i>
+            <br>
+            ~{{saves[1].name}}~
+            <br>
+            {{saves[1].sum}} ₴
+        </div>
+        <div class="centerText">
+            <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+            <br>
+            ~{{saves[2].name}}~
+            <br>
+            {{saves[2].sum}} ₴
+        </div>
+    </div>
+    <div class="flex">
+        <div class="half flex flexColumnCenter" style="margin-bottom: 15px;">
+          <h1>Income</h1>
+          <br>
+           <table class="home_table">
+               <tr>
+                   <td>Date: </td>
+                   <td> 
+                   <p class="flex">
+                        <select ng-model="income_day" ng-init="income_day=array_days[0]">
+                            <option ng-repeat="day in array_days" value="{{day}}">{{day}}</option>
+                        </select>
+                        <select ng-model="income_month" ng-init="income_month=array_months[0]">
+                            <option ng-repeat="month in array_months" value="{{month}}">{{month}}</option>
+                        </select>
+                        <select ng-model="income_year" ng-init="income_year=array_years[0]">
+                            <option ng-repeat="year in array_years" value="{{year}}">{{year}}</option>
+                        </select>
+                    </p>
+                </td>
+               </tr>
+               <tr>
+                   <td>From: </td>
+                   <td>
+                   <select ng-model="income_select_source">
+                        <option ng-repeat="source in sources track by $index" value="{{source}}">{{source}}</option>
+                    </select>
+                </td>
+               </tr>
+               <tr>
+                   <td>To: </td>
+                   <td>
+                       <select ng-model="income_select_save">
+                            <option ng-repeat="save in saves track by $index" value="{{save.name}}">{{save.name}}: {{save.sum}}</option>
+                        </select>
+                   </td>
+               </tr>
+               <tr>
+                   <td>Amount: </td>
+                   <td>
+                       <input type="text" ng-model="income_amount" placeholder="0">
+                   </td>
+               </tr>
+           </table>
+           <br>
+           <button ng-click="income_add()">ADD</button>
+
+
+        </div>
+        <div class="half flex flexColumnCenter" style="margin-bottom: 15px;">
+            <h1>Expense</h1>
+            <br>
+            <table class="home_table">
+                <tr>
+                    <td>Date: </td>
+                    <td>
+                        <p class="flex">
+                            <select ng-model="expence_day" ng-init="expence_day=array_days[0]">
+                            <option ng-repeat="day in array_days" value="{{day}}">{{day}}</option>
+                            </select>
+                            <select ng-model="expence_month" ng-init="expence_month=array_months[0]">
+                                <option ng-repeat="month in array_months" value="{{month}}">{{month}}</option>
+                            </select>
+                            <select ng-model="expence_year" ng-init="expence_year=array_years[0]">
+                                <option ng-repeat="year in array_years" value="{{year}}">{{year}}</option>
+                            </select>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>From: </td>
+                    <td>
+                        <select ng-model="expence_select_exp_save">
+                            <option ng-repeat="exp_save in saves track by $index" value="{{exp_save.name}}">{{exp_save.name}}: {{exp_save.sum}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>For: </td>
+                    <td>
+                        <select ng-model="expence_select_cat_exp">
+                            <option ng-repeat="categories in catExp track by $index" value="{{categories}}">{{categories}}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amount: </td>
+                    <td>
+                        <input type="text" ng-model="expence_amount" placeholder="0">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button ng-click="expence_add()">ADD</button>
+        </div>
+    </div>
+</div>

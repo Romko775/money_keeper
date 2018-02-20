@@ -1,0 +1,64 @@
+<!--Register block-->
+<div>
+    <!--      Крок 1-->
+    <div class="registerBlock flex flexColumnCenter" ng-show="show_register_step_one">
+        <h1>Register form</h1>
+        <input type="text" placeholder="login" ng-model="register_user_login" ng-readonly="is_free">
+        <br>
+        <!--           Відповідь чи є такий вже користувач-->
+        <button ng-click="check_user_login()">
+           {{register_user_login_responce}}</button>
+
+        <!--           <p>{{register_user_login_responce}}</p>-->
+        <br>
+        <input type="password" placeholder="password" ng-model="register_user_password_1" ng-show="is_free">
+        <br>
+        <input type="password" placeholder="repeat password" ng-model="register_user_password_2" ng-show="is_free">
+        <br>
+        <!--           Відповідь чи паролі сходяться-->
+        <p>{{register_password_responce}}</p>
+        <br>
+        <button ng-show="is_free" ng-click="register_btn_step_1()">Ok</button>
+
+    </div>
+    <!--       Крок 2-->
+    <div class="registerBlock flex flexColumnCenter" ng-show="show_register_step_two">
+        <h1>Edit account</h1>
+        
+        <form action="" class="flex">
+            <label for="user_name">Name:
+        <input type="text" id="user_name" ng-model="register_name">
+        
+        </label>
+            <br>
+            <label for="user_sname">
+          Second name: 
+           <input type="text" id="user_sname" ng-model="register_second_name">
+       </label>
+            <br>
+            <!--           <p>Birth date: <input type="text" placeholder="dd-MM-YYYYs" ng-model="register_b_day"></p>-->
+
+            <label for="user_email">
+            Email: 
+            <input type="email" id="user_email" ng-model="register_e_mail">
+        </label>
+        </form>
+
+        <!--
+           <div class="flex">
+               <div class="bordered half">
+                   <h4>Income</h4>
+
+                   <label ng-repeat="save in saves track by $index"><input type="checkbox" checked>{{save}}</label>
+               </div>
+               <div class="bordered half">
+                   <h4>Expences</h4>
+                   
+                   <label ng-repeat="catExpense in catExpenses track by $index"><input type="checkbox" checked>{{catExpense}}</label>
+               </div>
+           </div>
+-->
+       <br>
+        <button ng-click="register_btn_step_2()" style="width: 770px">OK</button>
+    </div>
+</div>

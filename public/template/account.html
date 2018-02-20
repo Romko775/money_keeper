@@ -1,0 +1,39 @@
+<!-- Account -->
+<div class="accountBlock flex" ng-show="show_account">
+    <div class="flex">
+        <div class="half flex flexColumnCenter">
+            <!--              Фото акаунту-->
+            <br>
+            <img src="../img/man.png" alt="" class="userImg">
+            <button style="height: 30px; font-weight: 300" class="btn_disabled">Upload photo</button>
+        </div>
+        <div class="half flex flexColumnCenter aboutUser">
+            <!--            Виведення інформації про користувача-->
+            <p>Name: {{user_name}}</p>
+            <p>Second name: {{user_s_name}}</p>
+            <!--             <p>B-day: {{user_b_day}}</p>-->
+            <p>Email: {{user_email}}</p>
+            <br>
+            <button style="height: 30px; font-weight: 300" class="btn_disabled">Edit</button>
+        </div>
+    </div>
+    <!--     кнопочки-->
+    <div class="flex btnAccount">
+        <div>
+            <button class="btn_disabled">Add saves</button>
+            <button class="btn_disabled">Delete saves</button>
+            <button class="btn_disabled">Edit saves</button>
+        </div>
+        <div>
+            <button class="btn_disabled">Add expences</button>
+            <button class="btn_disabled">Delete expences</button>
+            <button class="btn_disabled">Edit expences</button>
+        </div>
+        <div>
+            <button class="btn_disabled">Add </button>
+            <button class="btn_disabled">Delete </button>
+            <button class="btn_disabled">Edit </button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,390 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+   /* background-color: white; */
+background: #642B73;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+/*-----Стандартні класи------*/
+
+.flex {
+    display: flex;
+}
+
+.flexAround{
+    justify-content: space-around;
+}
+
+.flexColumnCenter{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.half {
+    width: 50%;
+}
+
+.centerText{
+    text-align: center;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #16a085;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    transition: all 1.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #e74c3c;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.select_shrink{
+    width: 50px;
+}
+
+.btn_disabled{
+    cursor: not-allowed;
+}
+
+/*---------------------------*/
+
+.container {
+    width: 768px;
+    margin: 0 auto;
+    /*    text-align: center;    */
+    min-height: 500px;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/*    border-radius: 0 0 10px 10px;*/
+    margin-top: 50px;
+     background-color: #620462;
+}
+
+/*---------------------------*/
+
+.welcomeBlock {
+    width: 100%;
+    min-height: 500px;
+}
+
+.welcomeBlock > h1 {
+    color: #34EFCA;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.welcomeBlock > h2 {
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+
+}
+
+/*---------------------------*/
+
+.loginBlock {
+    width: 100%;
+    min-height: 500px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.loginBlock > input {
+    width: 50%;
+    height: 50px;
+    background-color: #620462;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 26px;
+}
+
+/*---------------------------*/
+
+.registerBlock {
+    width: 100%;
+    min-height: 500px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.registerBlock > input {
+    width: 50%;
+    height: 50px;
+    background-color: #620462;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 26px;
+}
+
+.registerBlock > form {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.registerBlock > form > label > input {
+    height: 40px;
+    background-color: #620462;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 26px;
+}
+
+/*---------------------------*/
+
+.copyrightBlock{
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+    background: #642B73;
+background: -webkit-linear-gradient(to right, #C6426E, #642B73);
+background: linear-gradient(to right, #C6426E, #642B73);
+    box-sizing: border-box;
+
+}
+.copyrightBlock:hover{
+    cursor: pointer;
+    background: #642B73;
+background: -webkit-linear-gradient(to left, #C6426E, #642B73);
+background: linear-gradient(to left, #C6426E, #642B73);
+}
+
+/*---------------------------*/
+
+.panelBlock {
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.panelBlock > img {
+    height: 50px;
+    width: 50px;
+}
+
+.panelBlock > p {
+    flex-grow: 1;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #16a085;
+    background-color: white;
+}
+
+.panelBlock > p:hover {
+    color:red;
+    cursor: pointer;
+}
+
+.panelBlock > button{
+    width: 75px;
+}
+
+/*---------------------------*/
+
+.menuBlock {
+    width: 100%;
+    height: 50px;
+/*    border-top: 1px solid black;*/
+    flex-direction: row;
+    opacity: 1;
+}
+
+.menuBlock > button {
+    width: 25%;
+}
+
+/*---------------------------*/
+
+.homeBlock {
+    width: 100%;
+    color: white;
+}
+
+.incomeAdd, .expenseAdd  {
+/*    height: 400px;*/
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.home_table{
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.home_table td{
+    background-color: transparent !important;
+}
+.home_table tr{
+    background-color: transparent !important;
+}
+
+.home_table td {
+    width: 150px; 
+}
+
+.home_table select {
+    width: 100%; 
+    flex-shrink: 1;
+}
+.home_table input {
+    width: 100%;
+}
+
+
+/*---------------------------*/
+
+.accountBlock {
+    width: 100%;
+    min-height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.userImg {
+    height: 150px;
+    width: 150px;
+}
+
+.btnAccount {
+    height: 130px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.btnAccount > div > button {
+    height: 30px;
+    color: #16a085;
+    background-color: white;
+/*    border-radius: 20px;*/
+/*    border-radius: 20px;*/
+}
+
+.btnAccount > div > button:hover {
+    color: white;
+    background-color: #16a085;
+    transition: all 0.5s ease-in-out;
+}
+
+.aboutUser {
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/*---------------------------*/
+
+.historyBlock {
+    width: 100%;
+}
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+table {
+    color: #333;
+    width: 100%;
+/*    border-collapse: collapse;*/
+    border-spacing: 0;
+    border-radius: 26px;
+}
+
+td,
+th {
+    border: 1px solid transparent;
+    height: 30px;
+    transition: all 0.3s;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+th {
+    background: #DFDFDF;
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+td {
+    background: #FAFAFA;
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}
+
+tr:hover {
+    
+    color: #16a085
+}
+
+.searchInput {
+    width: 100%;
+    height: 30px;
+    background-color: #620462;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 26px;
+}
+
+/*---------------------------*/
+
+.statisticBlock {
+    width: 100%;
+    border: 1px solid black;
+
+}
+#piechart{
+/*    position:relative;*/
+    width:100%;
+    height:100%;
+}
+#piechart>div{
+    margin:0 auto;
+}
